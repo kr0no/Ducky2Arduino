@@ -26,7 +26,6 @@ for line in input_file:
 	elif cmd[0] == "DELAY":
 		data += ("delay(" + cmd[1].strip() + ");\n	")
 	elif cmd[0] == "STRING":
-		data += ("Keyboard.print('" + cmd[1].strip().replace('\'', '\\\'') + "');\n	")
 	elif cmd[0] == "GUI":
 		data += ("Keyboard.press(KEY_LEFT_GUI);\n	Keyboard.press(KEY_" + cmd[1].strip().upper() + ");\n	Keyboard.releaseAll();\n	")
 	elif cmd[0] == "MENU" or cmd[0] == "APP":
